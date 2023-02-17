@@ -10,3 +10,16 @@
      font-style: normal;
 };
 
+
+@mixin textcolor-whiteversion {
+     color: $color-005;
+}
+
+@mixin btnblackversion {
+     border: solid 1px #fff;
+     background-color: transparent;
+};
+@mixin btnwhiteversion {
+     border: solid 1px $color-004;
+     background-color: $color-004;
+}

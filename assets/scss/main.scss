@@ -2,5 +2,291 @@
 @import '_mixin.scss';
 
 
+// header
 
 
+.header-container {
+     max-width: 1800px;
+     margin: 0 auto;
+     padding: 0 15px;
+}
+
+.header__wrapper {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+     max-width: 100%;
+     width: 100%;
+}
+
+.header__wrapper--mobile {
+     display: none;
+}
+
+.header__inner-wrapper {
+     display: flex;
+     align-items: center;
+     gap: 60px;
+}
+
+.header__wrapper--versionone {
+     color: $white-body;
+}
+
+.header__firstblock {
+     display: flex;
+     align-items: center;
+     gap: 40px;
+}
+
+.header__locationblock {
+     display: flex;
+     align-items: center;
+     gap: 21px;
+}
+
+.header__locationblock--city {
+     display: flex;
+     align-items: center;
+     gap: 4px;
+     cursor: pointer;
+}
+
+.city__citytext {
+     align-items: center;
+     display: flex;
+     gap: 2px;
+}
+
+.city__title {
+     font-size: 18px;
+     line-height: 22px;
+     color: #fff;
+}
+
+.city__arrowdown {
+     cursor: pointer;
+}
+
+.header__locationblock--catalogbtn {
+     width: 136px;
+     text-align: center;
+     padding: 8px 0 10px 0;
+     border-radius: 50px;
+
+     color: #fff;
+     font-size: 18px;
+     line-height: 22px;
+}
+
+.catalogbtn--blackversion {
+     @include btnblackversion;
+     transition: all 0.5s ease;
+} 
+
+.catalogbtn--blackversion:hover {
+     @include btnwhiteversion;
+}
+
+.header__addition {
+     display: flex;
+     align-items: center;
+     gap: 30px;
+}
+
+.header__addition--text {
+     font-size: 18px;
+     line-height: 22px;
+}
+
+.header__lastblock {
+     display: flex;
+     align-items: center;
+     gap: 30px;
+}
+
+.heart--icon {
+     cursor: pointer;
+}
+
+.header__lastblock--search {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+}
+
+.header__btntext {
+     font-size: 18px;
+     line-height: 22px;
+}
+
+.header__telblock {
+     display: flex;
+     align-items: center;
+     gap: 7px;
+}
+
+.header__phonetext {
+     font-size: 16px;
+     line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// RESPONSIVE
+
+@media (max-width: 1400px) {
+     .header-container {
+          max-width: 1400px;
+          padding: 0px 15px;
+          margin: 0 auto;
+     }
+
+     .header__locationblock {
+          gap: 17px;
+     }
+
+     .city__title {
+          font-size: 14px;
+          line-height: 17px;
+     }
+
+     .header__locationblock--catalogbtn {
+          max-width: 99px;
+          font-size: 14px;
+          line-height: 17px;
+     }
+
+     .header__locationblock--catalogbtn {
+          background-color: $color-004;
+          border: $color-004;
+     }
+
+     .header__addition--text {
+          font-size: 14px;
+          line-height: 17px;
+     }
+
+     .header__addition {
+          gap: 20px;
+     }
+     
+     .header__btntext {
+          font-size: 14px;
+          line-height: 17px;
+     }
+
+     .header__phonetext {
+          font-size: 14px;
+          line-height: 17px;
+     }
+
+     .header__lastblock {
+          gap: 20px;
+     }
+}
+
+@media (max-width: 1300px) {
+     .header__telblock {
+          display: none;
+     }
+
+     .header__lastblock {
+          transform: translateY(7px);
+     }
+
+     .header__inner-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          gap: 40px;
+     }
+
+     .header__wrapper {
+          align-items: normal;
+     }
+
+}
+
+@media (max-width: 992px) {
+     .header__btntext {
+          display: none;
+     }
+}
+
+@media (max-width: 768px) {
+     .header__wrapper--responsive {
+          display: none;
+     }
+
+     .header__wrapper--mobile {
+          display: flex;
+          align-items: center;
+     }
+
+     
+
+     .header__burgerblock {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+     }
+
+     .call--icon {
+          width: 30px;
+          height: 30px;
+     }
+
+     .header__search--icon {
+          width: 25px;
+          height: 25px;
+     }
+
+     .header__burgermenu {
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+     }
+
+     .header__burgermenu--line {
+          background-color: #fff;
+          height: 3px;
+          width: 25px;
+          border-radius: 50px;
+     }
+
+     
+}
+
+@media(max-width: 540px) {
+     .header__logo {
+          width: 170px;
+          height: 26px;
+     }
+}
