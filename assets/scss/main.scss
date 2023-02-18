@@ -2,6 +2,12 @@
 @import '_mixin.scss';
 
 
+.header__burgermenuactive {
+     display: none;
+};
+
+
+
 // header
 
 
@@ -281,6 +287,185 @@
           border-radius: 50px;
      }
 
+     // animation burger menu 
+
+     @keyframes smoothopacity {
+          0% {
+               opacity: 0;
+               transform: translateX(100%);
+          }
+
+          50% {
+               opacity: 0.5;
+               transform: translateX(50%);
+          }
+
+          100% {
+               opacity: 1;
+               transform: translateX(0%);
+          }
+     }
+
+     @keyframes smoothopacityclose {
+          0% {
+               opacity: 1;
+               transform: translateX(0%);
+          }
+
+          50% {
+               opacity: 0.5;
+               transform: translateX(50%);
+          }
+
+          100% {
+
+               opacity: 0;
+               transform: translateX(100%);
+          }
+     }
+
+
+
+
+     .header__burgermenuactive {
+          display: none;
+          max-width: 100%;
+          width: 100%;
+          height: 100vh;
+          background-color: #161723;
+          position: fixed;
+          top: 0; 
+          z-index: 100000;
+
+          padding: 30px 20px;
+     }
+
+     .burgermenuactive--animation {
+          display: block;
+          transform: translateX(100%);
+          animation: smoothopacity 0.3s linear forwards;
+     }
+
+     .burgermenuactive--animationclose {
+          animation: smoothopacityclose 0.3s linear forwards;
+     }
+
+     .burgermenuactive__wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 150px;
+     }
+
+     .burgermenuactive__logo {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 100%;
+          width: 100%;
+     }
+
+     .burgermenuactive--iconclose {
+          cursor: pointer;
+     }
+     
+     .burgermenuactive__maincontent--wrapper {
+          display: flex;
+          justify-content: center;
+     }
+
+     .burgermenuactive__maincontent {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 40px;
+          max-width: 300px;
+          width: 100%;
+          
+     }
+
+     .burgermenuactive__btnblock {
+          display: flex;
+          flex-direction: column;
+          gap: 21px;
+     }
+
+     .burgermenuactive__button {
+          color: #fff;
+          @include btnblackversion;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 150%;
+
+          max-width: 100%;
+          width: 300px;
+          border-radius: 50px;
+          padding: 8px 0px 11px 0px;
+          transition: all 0.3s ease;
+     }
+
+     .burgermenuactive__button:hover {
+          @include btnwhiteversion;
+     }
+
+     .burgermenuactive__button--active {
+          @include btnwhiteversion;
+     }
+
+     .burgermenuactive__sublinks {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          align-content: center;
+          gap: 12px;
+          color: #C0C2D7;
+          transition: all 0.3s ease;
+     }
+
+     .burgermenuactive__sublinks:hover {
+          color: #e5e6ed;
+     }
+
+
+
+     .city__citytext {
+          gap: 0px;
+     }
+
+     .city__title {
+          font-weight: 600;
+          font-size: 17px;
+          line-height: 21px;
+          margin: 0px 2px 0px 4px;
+     }
+
+
+     .burgermenuactive__nextcontent {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          align-content: center;
+          gap: 22px;
+     }
+
+     .burgermenuactive__nextcontent--phoneblock {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+     }
+
+     .burgermenuactive__nextcontent--phonenumber {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: #C0C2D7;
+     }
+
+     .burgermenuactive__nextcontent--social {
+          display: flex;
+          gap: 22px;
+     }
      
 }
 

@@ -1,3 +1,7 @@
+.header__burgermenuactive {
+  display: none;
+}
+
 .header-container {
   max-width: 1800px;
   margin: 0 auto;
@@ -286,6 +290,243 @@
     height: 3px;
     width: 25px;
     border-radius: 50px;
+  }
+  @-webkit-keyframes smoothopacity {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+    }
+    50% {
+      opacity: 0.5;
+      -webkit-transform: translateX(50%);
+              transform: translateX(50%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+    }
+  }
+  @keyframes smoothopacity {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+    }
+    50% {
+      opacity: 0.5;
+      -webkit-transform: translateX(50%);
+              transform: translateX(50%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+    }
+  }
+  @-webkit-keyframes smoothopacityclose {
+    0% {
+      opacity: 1;
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+    }
+    50% {
+      opacity: 0.5;
+      -webkit-transform: translateX(50%);
+              transform: translateX(50%);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+    }
+  }
+  @keyframes smoothopacityclose {
+    0% {
+      opacity: 1;
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+    }
+    50% {
+      opacity: 0.5;
+      -webkit-transform: translateX(50%);
+              transform: translateX(50%);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+    }
+  }
+  .header__burgermenuactive {
+    display: none;
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #161723;
+    position: fixed;
+    top: 0;
+    z-index: 100000;
+    padding: 30px 20px;
+  }
+  .burgermenuactive--animation {
+    display: block;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-animation: smoothopacity 0.3s linear forwards;
+            animation: smoothopacity 0.3s linear forwards;
+  }
+  .burgermenuactive--animationclose {
+    -webkit-animation: smoothopacityclose 0.3s linear forwards;
+            animation: smoothopacityclose 0.3s linear forwards;
+  }
+  .burgermenuactive__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 150px;
+  }
+  .burgermenuactive__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
+    width: 100%;
+  }
+  .burgermenuactive--iconclose {
+    cursor: pointer;
+  }
+  .burgermenuactive__maincontent--wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .burgermenuactive__maincontent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    gap: 40px;
+    max-width: 300px;
+    width: 100%;
+  }
+  .burgermenuactive__btnblock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 21px;
+  }
+  .burgermenuactive__button {
+    color: #fff;
+    border: solid 1px #fff;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    max-width: 100%;
+    width: 300px;
+    border-radius: 50px;
+    padding: 8px 0px 11px 0px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .burgermenuactive__button:hover {
+    border: solid 1px #f4683f;
+    background-color: #f4683f;
+  }
+  .burgermenuactive__button--active {
+    border: solid 1px #f4683f;
+    background-color: #f4683f;
+  }
+  .burgermenuactive__sublinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    gap: 12px;
+    color: #C0C2D7;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .burgermenuactive__sublinks:hover {
+    color: #e5e6ed;
+  }
+  .city__citytext {
+    gap: 0px;
+  }
+  .city__title {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    margin: 0px 2px 0px 4px;
+  }
+  .burgermenuactive__nextcontent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    gap: 22px;
+  }
+  .burgermenuactive__nextcontent--phoneblock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 7px;
+  }
+  .burgermenuactive__nextcontent--phonenumber {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C0C2D7;
+  }
+  .burgermenuactive__nextcontent--social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 22px;
   }
 }
 @media (max-width: 540px) {
