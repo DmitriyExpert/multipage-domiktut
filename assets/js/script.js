@@ -10,11 +10,3 @@ headerburgermenuClosed.addEventListener('click', function () {
 
 
 // ANIMATION SLIDER
-
-slideBtnPrev.addEventListener('click', function () {
-     slidePrev();
-});
-
-slideBtnNext.addEventListener('click', function () {
-     slideNext();
-});
