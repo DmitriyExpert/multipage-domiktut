@@ -16,5 +16,7 @@ const burgerMenuClose = function () {
           headerburgermenuActive.classList.remove('burgermenuactive--animation');
           headerburgermenuActive.classList.remove('burgermenuactive--animationclose');
      }, 400);
-     
 };
+
+// ANIMATION SLIDER
+
