@@ -10,6 +10,8 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Raleway:wght@700;800&family=Roboto:wght@700&display=swap" rel="stylesheet">
      <title>DomikTut</title>
+     <link rel="stylesheet" href="assets/owl/dist/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="assets/owl/dist/assets/owl.theme.default.min.css">
 </head>
 <body>
      <div class="wrapper">
@@ -167,33 +169,35 @@
                                              </p>
                                         </div>
 
-                                        <div class="intro__slider slider">
-                                             <div class="slide">
-                                                  <img src="assets/images/intro/swim.png" alt="swim" class="slide__img">
-                                                  <p class="slide__text">
-                                                       С бассейном
-                                                  </p>
+                                        <div class="owl-carousel owl-theme">
+                                             <div class="item">
+                                                  <div class="slide__body">
+                                                       <img src="assets/images/intro/swim.png" alt="swim" class="slide__img">
+                                                       <p class="slide__text">
+                                                            С бассейном
+                                                       </p>
+                                                  </div>
                                              </div>
-                                             <div class="slide">
-                                                  <img src="assets/images/intro/threeughome.png" alt="threeughome" class="slide__img">
-                                                  <p class="slide__text">
-                                                       Семейные и уютные
-                                                  </p>
+                                             <div class="item">
+                                                  <div class="slide__body">
+                                                       <img src="assets/images/intro/threeughome.png" alt="hometreug" class="slide__img">
+                                                       <p class="slide__text">
+                                                            Семейные и уютные
+                                                       </p>
+                                                  </div>
+                                                  
                                              </div>
-                                             <div class="slide">
-                                                  <img src="assets/images/intro/home.png" alt="home" class="slide__img">
-                                                  <p class="slide__text">
-                                                       Хиты продаж
-                                                  </p>
+                                             <div class="item">
+                                                  <div class="slide__body">
+                                                       <img src="assets/images/intro/home.png" alt="home" class="slide__img">
+                                                       <p class="slide__text">
+                                                            Хиты продаж
+                                                       </p>
+                                                  </div>  
                                              </div>
-
-                                             <button class="button__slideprev" name="button" type="button">
-                                                  <img src="assets/images/intro/arrowleft.svg" alt="prev">
-                                             </button>
-                                             <button class="button__slidenext" name="button" type="button">
-                                                  <img src="assets/images/intro/arrowright.svg" alt="next">
-                                             </button>
                                         </div>
+
+                                        
 
                                         <div class="intro__social">
                                              <img src="assets/images/header/youtube.svg" alt="youtube">
@@ -206,7 +210,35 @@
                               </div>
                               <div class="intro__inner">
                                    <div class="intro__inputfield">
-
+                                        <div class="intro__formcontainers">
+                                             <div class="intro__formcontainer--first">
+                                                  <div class="intro__input--beforetitle">
+                                                       <h4 class="input__title">Въезд</h4>
+                                                       <h4 class="input__title">Отъезд</h4>
+                                                  </div>
+                                                  <form action="#" id="data" class="intro__form">
+                                                       <div class="input__wrapper">
+                                                            <input type="text" placeholder="От" class="intro__input">
+                                                       </div>
+                                                       <div class="input__wrapper">
+                                                            <input type="text" placeholder="До" class="intro__input intro__input--border">
+                                                       </div>
+                                                  </form>
+                                             </div>
+                                             <div class="intro__formcontainer--first">
+                                                  <div class="intro__input--beforetitle">
+                                                       <h4 class="input__title input__title--reset">Количество человек</h4>
+                                                  </div>
+                                                  <form action="#" id="data" class="intro__form">
+                                                       <div class="input__wrapper input__wrapper--reset">
+                                                            <input type="text" placeholder="12" class="intro__input">
+                                                       </div>
+                                                  </form>
+                                             </div>
+                                        </div>
+                                        <div class="intro__inputcontainer">
+                                             
+                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -222,7 +254,21 @@
                </div>
           </footer>
      </div>
+
      <script src="assets/js/function.js"></script>
      <script src="assets/js/script.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+     <script src="assets/owl/dist/owl.carousel.min.js"></script>
+     <script type="text/javascript">
+          var owl = $('.owl-carousel');
+          owl.owlCarousel({
+               items:3,
+               loop:true,
+               margin:25,
+               autoplay:true,
+               autoplayTimeout:2500,
+               autoplayHoverPause:true
+          });
+     </script>
 </body>
 </html>
