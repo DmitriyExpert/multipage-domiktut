@@ -211,7 +211,7 @@
                               <div class="intro__inner">
                                    <div class="intro__inputfield">
                                         <div class="intro__formcontainers">
-                                             <div class="intro__formcontainer--first">
+                                             <div class="intro__formcontainer--content">
                                                   <div class="intro__input--beforetitle">
                                                        <h4 class="input__title">Въезд</h4>
                                                        <h4 class="input__title">Отъезд</h4>
@@ -225,7 +225,7 @@
                                                        </div>
                                                   </form>
                                              </div>
-                                             <div class="intro__formcontainer--first">
+                                             <div class="intro__formcontainer--content">
                                                   <div class="intro__input--beforetitle">
                                                        <h4 class="input__title input__title--reset">Количество человек</h4>
                                                   </div>
@@ -236,9 +236,29 @@
                                                   </form>
                                              </div>
                                         </div>
-                                        <div class="intro__inputcontainer">
-                                             
+                                        
+                                        <div class="intro__rangeinputcontainer">
+                                             <div class="intro__track">
+                                                  
+                                             </div>
+                                             <div class="intro__inputs">
+                                                  <input id="volume" type="range" min="0" max="150000" value="13000" step="1" class="intro__range-1" oninput="slideOne()">
+                                                  <input id="volume" type="range" min="0" max="150000" value="150000" step="1" class="intro__range-2" oninput="slideTwo()">
+                                                  <div class="intro__values">
+                                                       <span class="intro__rangeinput--thumb1 intro__rangeinput--thumbsett">
+                                                            13 000 ₽
+                                                       </span>
+                                                       <span class="intro__dash"> &dash;</span>
+                                                       <span class="intro__rangeinput--thumb2 intro__rangeinput--thumbsett">
+                                                            150 000 ₽
+                                                       </span>
+                                                  </div>
+                                             </div>
                                         </div>
+
+                                        <button class="intro__btn" type="button" name="button">
+                                             Найти
+                                        </button>
                                    </div>
                               </div>
                          </div>

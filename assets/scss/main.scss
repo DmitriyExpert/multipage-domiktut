@@ -244,6 +244,7 @@
      border-radius: 20px;
      display: flex;
      flex-direction: column;
+     gap: 48px;
 }
 
 
@@ -257,6 +258,10 @@
      display: flex;
      flex-direction: column;
      gap: 6px;
+}
+
+.intro__formsFailed {
+     border: solid 1px #EF0000;
 }
 
 
@@ -319,6 +324,117 @@
 }
 
 
+
+.intro__rangeinputcontainer {
+     max-width: 240px;
+     width: 100%;
+     margin: 0 auto;
+     position: relative;
+}
+
+input[type="range"] {
+     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    outline: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+};
+
+.intro__track {
+     width: 100%;
+     height: 1px;
+     background-color: #808080;
+}
+
+
+input[type="range"]::-webkit-slider-runnable-track{
+     -webkit-appearance: none;
+     height: 5px;
+}
+
+input[type="range"]::-moz-range-track{
+     -moz-appearance: none;
+     height: 5px;
+}
+
+input[type="range"]::-ms-track{
+     appearance: none;
+     height: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+     -webkit-appearance: none;
+     height: 23px;
+     width: 8px;
+     background-color: #F4683F;
+     border-radius: 200px;
+     cursor: pointer;
+     margin-top: -9px;
+     pointer-events: auto;
+}
+
+input[type="range"]::-moz-range-thumb{
+     appearance: none;
+     height: 23px;
+     width: 8px;
+     background-color: #F4683F;
+     border-radius: 200px;
+     cursor: pointer;
+     margin-top: -9px;
+     pointer-events: auto;
+}
+
+input[type="range"]::-ms-thumb {
+     appearance: none;
+     height: 23px;
+     width: 8px;
+     background-color: #F4683F;
+     border-radius: 200px;
+     cursor: pointer;
+     margin-top: -9px;
+     pointer-events: auto;
+}
+
+.intro__inputs {
+     position: relative;
+}
+
+.intro__values {
+     position: absolute;
+     max-width: 100%;
+     width: 100%;
+     top: 17px;
+     display: flex;
+     justify-content: center;
+     gap: 12px;
+}
+
+
+.intro__rangeinput--thumbsett {
+     font-weight: 600;
+     font-size: 16px;
+     line-height: 150%;
+     color: #444444;
+}
+
+.intro__btn {
+     margin-top: 30px;
+     width: 100%;
+     padding: 10px 0 13px 0;
+     background-color: #F4683F;
+     border-radius: 50px;
+
+     font-weight: 600;
+     font-size: 18px;
+     line-height: 150%;
+     color: #fff;
+}
 
 
 
