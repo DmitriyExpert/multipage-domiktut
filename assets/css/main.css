@@ -2,6 +2,10 @@
   display: none;
 }
 
+.intro__applications {
+  display: none;
+}
+
 .header-container {
   max-width: 1800px;
   margin: 0 auto;
@@ -205,6 +209,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 222px 0px 80px 0;
+  gap: 15px;
 }
 
 .intro__content {
@@ -569,6 +574,12 @@ input[type=range]::-ms-thumb {
   .header__lastblock {
     gap: 20px;
   }
+  .intro__wrapper {
+    padding: 222px 0px 0px 0;
+  }
+  .intro__content {
+    gap: 45px;
+  }
 }
 @media (max-width: 1300px) {
   .header__telblock {
@@ -600,6 +611,53 @@ input[type=range]::-ms-thumb {
 @media (max-width: 992px) {
   .header__btntext {
     display: none;
+  }
+  .city__title {
+    font-size: 16px;
+  }
+  .header__locationblock--catalogbtn {
+    font-size: 16px;
+  }
+  .header__addition--text {
+    font-size: 16px;
+  }
+  .intro__wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .intro__social {
+    display: none;
+  }
+  .intro__inputfield {
+    display: none;
+  }
+  .intro__title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 65px;
+    line-height: 127%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+  .intro__applications {
+    display: block;
+    color: #fff;
+    border: solid 1px #f4683f;
+    background-color: #f4683f;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 320px;
+    width: 100%;
+    border-radius: 50px;
+    padding: 8px 0px 11px 0px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin: 0 auto;
   }
 }
 @media (max-width: 768px) {
@@ -885,10 +943,44 @@ input[type=range]::-ms-thumb {
     display: flex;
     gap: 22px;
   }
+  .owl-carousel {
+    display: none !important;
+  }
+  .intro__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .intro__content {
+    max-width: 600px;
+    gap: 50px;
+  }
+  .intro__title {
+    line-height: 140%;
+    font-size: 50px;
+  }
 }
 @media (max-width: 540px) {
   .header__logo {
     width: 170px;
     height: 26px;
+  }
+  .intro__wrapper {
+    padding: 222px 0px 0 0;
+  }
+  .intro__content {
+    max-width: 320px;
+  }
+  .intro__title {
+    font-size: 40px;
+  }
+  .intro__subtitle {
+    font-size: 18px;
+  }
+  .intro__applications {
+    font-size: 18px;
   }
 }
