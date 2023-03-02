@@ -497,6 +497,141 @@ input[type="range"]::-ms-thumb {
 }
 
 
+// popular
+
+.section__popular {
+     padding: 0px 0px 200px 0;
+}
+
+.popular__wrapper {
+     max-width: 100%;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 80px;
+}
+
+
+.popular__inner {
+     display: flex;
+     justify-content: space-between;
+     gap: 40px;
+}
+
+.popular__colomn {
+     display: flex;
+     flex-direction: column;
+     gap: 40px;
+}
+
+.popular__item {
+     position: relative;
+     box-shadow: 0px 4px 80px rgba(5, 9, 22, 0.08);
+     border-radius: 20px;
+     max-width: 440px;
+     width: 100%;
+}
+
+.popular__item--container {
+     padding: 30px 30px 40px 30px;
+}
+
+.popular__item--title {
+     font-weight: 800;
+     font-size: 24px;
+     line-height: 150%;
+     color: #333333;
+     margin-bottom: 16px;
+}
+
+.popular__item--housedescription {
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+     margin-bottom: 27px;
+}
+
+.housedescription__item {
+     display: flex;
+     align-items: center;
+     gap: 12px;
+}
+
+.housedescription__text {
+     font-weight: 600;
+     font-size: 16px;
+     line-height: 150%;
+     color: #727488;
+}
+
+.popular__price {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.popular__price--text {
+     font-weight: 800;
+     font-size: 22px;
+     line-height: 150%;
+     color: #333333;
+     font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.popular__price--link {
+     font-weight: 600;
+     font-size: 16px;
+     line-height: 150%;
+     color: #F4683F !important;
+}
+
+.popular__item--imgwrapper {
+     position: relative;
+}
+
+
+.popular__peopleblock {
+     max-width: 92px;
+     width: 100%;
+     padding: 7px 0px 8px 0px;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 6px;
+     border-radius: 150px;
+     background-color: #fff;
+
+     position: absolute;
+     top: 24px;
+     right: 20px;
+}
+
+.popular__peopleblock--text {
+     font-weight: 600;
+     font-size: 14px;
+     line-height: 150%;
+     color: #727488;
+}
+
+.popular__favoriteblock {
+     display: flex;
+     justify-content: center;
+     cursor: pointer;
+
+     padding: 13px 0 11px 0;
+     max-width: 50px;
+     width: 100%;
+     position: absolute;
+     bottom: 20px;
+     right: 20px;
+
+     background: rgba(255, 255, 255, 0.5);
+     box-shadow: 0px 4px 20px rgba(21, 22, 34, 0.2);
+     border-radius: 200px;
+}
+
+
 
 
 
