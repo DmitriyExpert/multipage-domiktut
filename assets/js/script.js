@@ -1,3 +1,14 @@
+// Lazy loading img
+
+const imgOnSite = document.querySelectorAll('img');
+
+for (let item of imgOnSite) {
+     item.setAttribute('loading', 'lazy');
+};
+
+
+
+
 // ANIMATION BURGER MENU
 
 const headerBurgermenuBtnActivated = document.querySelector('.header__burgermenu');
