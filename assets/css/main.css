@@ -1258,6 +1258,8 @@ input[type=range]::-ms-thumb {
   0% {
     opacity: 0;
     overflow: hidden;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   5% {
     padding: 0px 0px 18px 0;
@@ -1298,6 +1300,8 @@ input[type=range]::-ms-thumb {
   50% {
     padding: 0px 0px 9px 0;
     opacity: 0.5;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
   55% {
     padding: 0px 0px 8px 0;
@@ -1338,12 +1342,16 @@ input[type=range]::-ms-thumb {
   100% {
     opacity: 0;
     overflow: hidden;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
 }
 @keyframes questionsTextBlockAnimationClose {
   0% {
     opacity: 0;
     overflow: hidden;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   5% {
     padding: 0px 0px 18px 0;
@@ -1384,6 +1392,8 @@ input[type=range]::-ms-thumb {
   50% {
     padding: 0px 0px 9px 0;
     opacity: 0.5;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
   55% {
     padding: 0px 0px 8px 0;
@@ -1424,6 +1434,8 @@ input[type=range]::-ms-thumb {
   100% {
     opacity: 0;
     overflow: hidden;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
 }
 .questions__textblock--animationopen {
