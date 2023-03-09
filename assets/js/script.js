@@ -104,7 +104,8 @@ const questionVerticalLine = document.querySelectorAll('.question__verticalline'
 const questionTextBlock = document.querySelectorAll('.questions__item--textblock');
 
 for (let i = 0; i < questionAction.length; i++) {
-     questionAction[i].addEventListener('click', function () {
+     questionAction[i].addEventListener('click', function (e) {
+          e.preventDefault();
           // Animation lines
           if (questionVerticalLine[i].classList.contains(('questions--tranformanimationminus'))) {
                questionVerticalLine[i].classList.add('questions--tranformanimationplus');
