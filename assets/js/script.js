@@ -97,4 +97,40 @@ introInputFieldBtn.addEventListener('click', function () {
 });
 
 
-        
+// questions akkardion
+
+const questionAction = document.querySelectorAll('.questions__button');
+const questionVerticalLine = document.querySelectorAll('.question__verticalline');
+const questionTextBlock = document.querySelectorAll('.questions__item--textblock');
+
+for (let i = 0; i < questionAction.length; i++) {
+     questionAction[i].addEventListener('click', function () {
+          // Animation lines
+          if (questionVerticalLine[i].classList.contains(('questions--tranformanimationminus'))) {
+               questionVerticalLine[i].classList.add('questions--tranformanimationplus');
+               questionVerticalLine[i].classList.remove('questions--tranformanimationminus');
+               setTimeout(() => {
+                    questionVerticalLine[i].classList.remove('questions--tranformanimationplus')
+               }, 300);
+               // Animation textblock
+
+
+               questionTextBlock[i].classList.remove('questions__textblock--animationopen');
+               questionTextBlock[i].classList.add('questions__textblock--animationclose');
+               setTimeout(() => {
+                    questionTextBlock[i].classList.add('d-n')
+                    questionTextBlock[i].classList.remove('questions__textblock--animationclose')
+               },500);
+
+               
+
+          } else {
+               // Animation lines
+               questionVerticalLine[i].classList.add('questions--tranformanimationminus');
+               // Animation textblock
+               questionTextBlock[i].classList.remove('d-n');
+               questionTextBlock[i].classList.add('questions__textblock--animationopen');
+          }
+     });
+};
+
