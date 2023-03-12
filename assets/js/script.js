@@ -135,3 +135,73 @@ for (let i = 0; i < questionAction.length; i++) {
      });
 };
 
+
+
+// search--popup
+
+const btnSearchHeader = document.querySelector('.header__lastblock--search');
+const bodySite = document.querySelector('body');
+const popupSearchBlock = document.querySelector('.popup__search');
+const btnSearchHeaderClose = document.querySelector('.popup__search--close');
+const btnSearchHeaderMobile = document.querySelector('.header__search--icon');
+
+const searchforminput = document.querySelector('.searchform__input');
+const btnSearchInner = document.querySelector('.searchform__btn');
+const searchInputBlock = document.querySelector('.searchform__inputblock');
+
+const popupWrapper = document.querySelector('.popup__search--wrapper');
+
+btnSearchHeader.addEventListener('click', function () {
+     if (popupSearchBlock.classList.contains('d-n')) {
+          popupSearchBlock.classList.remove('d-n');
+          popupSearchBlock.classList.add('animationPopupSearchOpen');
+          bodySite.classList.add('overflowHidden');
+          setTimeout(() => {
+               popupSearchBlock.classList.remove('animationPopupSearchOpen')
+          }, 300)
+     }
+});
+
+btnSearchHeaderMobile.addEventListener('click', function () {
+     if (popupSearchBlock.classList.contains('d-n')) {
+          popupSearchBlock.classList.remove('d-n');
+          popupSearchBlock.classList.add('animationPopupSearchOpen');
+          bodySite.classList.add('overflowHidden');
+          popupWrapper.classList.add('sens--off')
+          setTimeout(() => {
+               popupSearchBlock.classList.remove('animationPopupSearchOpen')
+          }, 300)
+     }
+});
+
+btnSearchHeaderClose.addEventListener('click', function () {
+     popupSearchBlock.classList.add('animationPopupSearchClose');
+     setTimeout(() => {
+          popupSearchBlock.classList.remove('animationPopupSearchClose');
+          popupSearchBlock.classList.add('d-n');
+          bodySite.classList.remove('overflowHidden');
+     }, 300);
+});
+
+
+
+btnSearchInner.addEventListener('click', function () {
+     if (searchforminput.value == '') {
+          alert('Введите данные корректно')
+          searchInputBlock.classList.add('searchform__inputblock--animationborder');
+     } else {
+          searchforminput.value = '';
+     }
+
+     searchforminput.addEventListener('input', function () {
+          if (searchforminput.value != '') {
+               searchInputBlock.classList.remove('searchform__inputblock--animationborder');
+          }
+     });
+
+});
+
+
+
+
+
