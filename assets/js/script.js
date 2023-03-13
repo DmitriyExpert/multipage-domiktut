@@ -8,6 +8,46 @@ for (let item of imgOnSite) {
 
 
 
+// Animation heart
+
+const heartIcon = document.querySelector('.heart--icon');
+
+const intervalId = setInterval(() => {
+     setTimeout(() => {
+          heartIcon.classList.add('animationHeartUp');
+     }, 100);
+
+     setTimeout(() => {
+          heartIcon.classList.remove('animationHeartUp')
+          heartIcon.classList.add('animationHeartDown');
+     }, 1200);
+
+     setTimeout(() => {
+          heartIcon.classList.remove('animationHeartDown');
+     }, 1700);
+}, 1700);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ANIMATION BURGER MENU
 
@@ -200,6 +240,24 @@ btnSearchInner.addEventListener('click', function () {
      });
 
 });
+
+
+
+
+// Animation scroll
+
+const smoothLinksQuestionsHeader = document.querySelectorAll('a[href^="#scrollAnchorQuestionHeader"]');
+for (let smoothLink of smoothLinksQuestionsHeader) {
+     smoothLink.addEventListener('click', function (e) {
+          console.log(smoothLink)
+          e.preventDefault();
+          const id = smoothLink.getAttribute('href');
+          document.querySelector(id).scrollIntoView({
+               behavior: 'smooth',
+               block: 'start'
+          });
+     });
+};
 
 
 
