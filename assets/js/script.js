@@ -1,3 +1,9 @@
+const bodySite = document.querySelector('body');
+
+
+
+
+
 // Lazy loading img
 
 const imgOnSite = document.querySelectorAll('img');
@@ -30,6 +36,60 @@ const intervalId = setInterval(() => {
 
 
 
+// pop up City
+
+const menuCity = document.querySelectorAll('.city__citytext--menu');
+const menuCityActivator = document.querySelectorAll('.city__citytext');
+const menuCityItem = document.querySelectorAll('.city__citytext--menu-item');
+
+const cityTitle = document.querySelectorAll('.city__title');
+
+
+for (let i = 0; i < menuCity.length; i++) {
+     menuCity[i].classList.add('menuCity--notActive');
+};
+
+for (let i = 0; i < menuCityActivator.length; i++) {
+     menuCityActivator[i].addEventListener('click', function () {
+
+          if (menuCity[i].classList.contains('menuCity--Active')) {
+               menuCity[i].classList.remove('menuCity--Active');
+               menuCity[i].classList.add('cityMenuClose');
+               setTimeout(() => {
+                    menuCity[i].classList.add('menuCity--notActive');
+                    menuCity[i].classList.add('d-n');
+                    menuCity[i].classList.remove('cityMenuClose');
+               }, 300);
+          };
+
+          if (menuCity[i].classList.contains('menuCity--notActive')) {
+               menuCity[i].classList.remove('menuCity--notActive');
+               menuCity[i].classList.remove('d-n');
+               menuCity[i].classList.add('menuCity--Active');
+               menuCity[i].classList.add('cityMenuActivated');
+               setTimeout(() => {
+                    menuCity[i].classList.remove('cityMenuActivated');
+               },300);
+          };
+          
+          for (let j = 0; j < menuCityItem.length; j++) {
+               menuCityItem[j].addEventListener('click', function () {
+                    cityTitle[i].innerText = menuCityItem[j].innerText
+               });
+          };
+     });
+};
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -55,12 +115,25 @@ const headerBurgermenuBtnActivated = document.querySelector('.header__burgermenu
 const headerburgermenuActive = document.querySelector('.header__burgermenuactive');
 const headerburgermenuClosed = document.querySelector('.burgermenuactive--iconclose');
 
+const burgerLinks = document.querySelectorAll('.burgermenuactive__sublinks--input');
+
+for (let item of burgerLinks) {
+     item.addEventListener('click', function (e) {
+          e.preventDefault();
+          burgerMenuClose();
+          bodySite.classList.remove('overflowHidden');
+     });
+}
+
+
 headerBurgermenuBtnActivated.addEventListener('click', function () {
      burgerMenuActivation();
+     bodySite.classList.add('overflowHidden');
 });
 
 headerburgermenuClosed.addEventListener('click', function () {
      burgerMenuClose();
+     bodySite.classList.remove('overflowHidden');
 });
 
 
@@ -131,7 +204,12 @@ introInputFieldBtn.addEventListener('click', function () {
      if (resultFor == '') {
           return
      } else {
-          console.log(resultFor)
+          for (let item1 of introInputsText) {
+               item1.value = '';
+          };
+          for (let item2 of introForms) {
+               item2.style.border = '1px solid #C0C2D7'
+          };
      }
      
 });
@@ -180,7 +258,6 @@ for (let i = 0; i < questionAction.length; i++) {
 // search--popup
 
 const btnSearchHeader = document.querySelector('.header__lastblock--search');
-const bodySite = document.querySelector('body');
 const popupSearchBlock = document.querySelector('.popup__search');
 const btnSearchHeaderClose = document.querySelector('.popup__search--close');
 const btnSearchHeaderMobile = document.querySelector('.header__search--icon');
@@ -194,10 +271,10 @@ const popupWrapper = document.querySelector('.popup__search--wrapper');
 btnSearchHeader.addEventListener('click', function () {
      if (popupSearchBlock.classList.contains('d-n')) {
           popupSearchBlock.classList.remove('d-n');
-          popupSearchBlock.classList.add('animationPopupSearchOpen');
+          popupSearchBlock.classList.add('animationPopupOpen');
           bodySite.classList.add('overflowHidden');
           setTimeout(() => {
-               popupSearchBlock.classList.remove('animationPopupSearchOpen')
+               popupSearchBlock.classList.remove('animationPopupOpen')
           }, 300)
      }
 });
@@ -205,19 +282,19 @@ btnSearchHeader.addEventListener('click', function () {
 btnSearchHeaderMobile.addEventListener('click', function () {
      if (popupSearchBlock.classList.contains('d-n')) {
           popupSearchBlock.classList.remove('d-n');
-          popupSearchBlock.classList.add('animationPopupSearchOpen');
+          popupSearchBlock.classList.add('animationPopupOpen');
           bodySite.classList.add('overflowHidden');
           popupWrapper.classList.add('sens--off')
           setTimeout(() => {
-               popupSearchBlock.classList.remove('animationPopupSearchOpen')
+               popupSearchBlock.classList.remove('animationPopupOpen')
           }, 300)
      }
 });
 
 btnSearchHeaderClose.addEventListener('click', function () {
-     popupSearchBlock.classList.add('animationPopupSearchClose');
+     popupSearchBlock.classList.add('animationPopupClose');
      setTimeout(() => {
-          popupSearchBlock.classList.remove('animationPopupSearchClose');
+          popupSearchBlock.classList.remove('animationPopupClose');
           popupSearchBlock.classList.add('d-n');
           bodySite.classList.remove('overflowHidden');
      }, 300);
@@ -242,14 +319,61 @@ btnSearchInner.addEventListener('click', function () {
 });
 
 
+// prefooter pop up
+
+
+const prefooterBtn = document.querySelector('.prefooter__button');
+const prefooterCloseBtn = document.querySelector('.prefooter__popup--close');
+const prefooterPopup = document.querySelector('.prefooter__popup');
+const prefooterPopupNextBtn = document.querySelector('.prefooter__popup--btn');
+const prefooterPopupNext = document.querySelector('.prefooter__popup--content--next');
+
+prefooterBtn.addEventListener('click', function () {
+     if (prefooterPopup.classList.contains('d-n')) {
+          prefooterPopup.classList.remove('d-n');
+          prefooterPopup.classList.add('animationPopupOpen');
+          bodySite.classList.add('overflowHidden');
+          setTimeout(() => {
+               prefooterPopup.classList.remove('animationPopupOpen')
+          }, 300)
+     }
+});
+
+prefooterCloseBtn.addEventListener('click', function () {
+     prefooterPopup.classList.add('animationPopupClose');
+     setTimeout(() => {
+          prefooterPopup.classList.remove('animationPopupClose');
+          prefooterPopup.classList.add('d-n');
+          bodySite.classList.remove('overflowHidden');
+     }, 300);
+});
+
+
+
+
 
 
 // Animation scroll
 
+// to Questions
+
 const smoothLinksQuestionsHeader = document.querySelectorAll('a[href^="#scrollAnchorQuestionHeader"]');
 for (let smoothLink of smoothLinksQuestionsHeader) {
      smoothLink.addEventListener('click', function (e) {
-          console.log(smoothLink)
+          e.preventDefault();
+          const id = smoothLink.getAttribute('href');
+          document.querySelector(id).scrollIntoView({
+               behavior: 'smooth',
+               block: 'start'
+          });
+     });
+};
+
+// to Prefooter
+
+const smoothLinksPrefooter = document.querySelectorAll('a[href^="#prefooter"]');
+for (let smoothLink of smoothLinksPrefooter) {
+     smoothLink.addEventListener('click', function (e) {
           e.preventDefault();
           const id = smoothLink.getAttribute('href');
           document.querySelector(id).scrollIntoView({

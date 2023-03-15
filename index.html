@@ -61,6 +61,14 @@
                                         Казань
                                    </p>
                                    <img src="assets/images/header/arrowdown.svg" alt="arrowdown" class="city__arrowdown">
+                                   <div class="city__citytext--menu d-n">
+                                        <button class="city__citytext--menu-item citytext__menu--itemKazan" type="button" name="button">
+                                             Казань
+                                        </button>
+                                        <button class="city__citytext--menu-item citytext__menu--itemMoscow" type="button" name="button">
+                                             Москва
+                                        </button>
+                                   </div>
                               </div>
                               <div class="burgermenuactive__btnblock">
                                    <button class="burgermenuactive__button">
@@ -75,7 +83,7 @@
                               </div>
 
                               <div class="burgermenuactive__sublinks">
-                                   <a href="#" class="burgermenuactive__sublinks--input">
+                                   <a href="#prefooter" class="burgermenuactive__sublinks--input">
                                         Сотрудничество
                                    </a>
                                    <a href="#scrollAnchorQuestionHeader" class="burgermenuactive__sublinks--input">
@@ -136,6 +144,14 @@
                                                             Казань
                                                        </p>
                                                        <img src="assets/images/header/arrowdown.svg" alt="arrowdown" class="city__arrowdown">
+                                                       <div class="city__citytext--menu d-n">
+                                                            <button class="city__citytext--menu-item citytext__menu--itemKazan" type="button" name="button">
+                                                                 Казань
+                                                            </button>
+                                                            <button class="city__citytext--menu-item citytext__menu--itemMoscow" type="button" name="button">
+                                                                 Москва
+                                                            </button>
+                                                       </div>
                                                   </div>
                                              </div>
                                              <button class="header__locationblock--catalogbtn catalogbtn--blackversion" name="button" type="button">
@@ -151,7 +167,7 @@
                                                   Частые вопросы
                                              </p>
                                         </a>
-                                        <a href="#" class="header__addition--link">
+                                        <a href="#prefooter" class="header__addition--link">
                                              <p class="header__addition--text">
                                                   Сотрудничество
                                              </p>
@@ -242,7 +258,7 @@
                                              </div>
                                         </div>
 
-                                        <button class="intro__applications" type="button" name="button">
+                                        <button class="intro__applications btn--sett" type="button" name="button">
                                              Заявки на подбор
                                         </button>
 
@@ -303,7 +319,7 @@
                                              </div>
                                         </div>
 
-                                        <button class="intro__btn" type="button" name="button">
+                                        <button class="intro__btn btn--sett" type="button" name="button">
                                              Найти
                                         </button>
                                    </div>
@@ -729,7 +745,7 @@
                                         </div>
                                    </div>
                               </div>
-                              <button type="button" class="popular__btncatalog" name="button">
+                              <button type="button" class="popular__btncatalog btn--sett" name="button">
                                    Перейти в каталог
                               </button>
                          </div>
@@ -825,7 +841,7 @@
                                         </div>
                               
                                    </div>
-                                   <button type="button" class="popular__btncatalog" name="button">
+                                   <button type="button" class="popular__btncatalog btn--sett" name="button">
                                         Перейти в каталог
                                    </button>
                               </div>
@@ -897,7 +913,7 @@
                                    </div>
                               </div>
                               
-                              <button class="service__button" type="submit" name="button">
+                              <button class="service__button btn--sett" type="submit" name="button">
                                    Узнать подробнее
                               </button>
                          </div>
@@ -1043,7 +1059,7 @@
                     </div>
                </section>
                
-               <section class="section__prefooter">
+               <section id="prefooter" class="section__prefooter">
                     <div class="container">
                          <div class="prefooter__wrapper">
                               <div class="prefooter__content">
@@ -1055,13 +1071,52 @@
                                              Оставьте заявку и мы свяжемся с вами для уточнения деталей
                                         </p>
                                    </div>
-                                   <button class="prefooter__button" type="button" name="button">
+                                   <button class="prefooter__button btn--sett" type="button" name="button">
                                         Оставить заявку
                                    </button>
                               </div>
                          </div>
                     </div>
                </section>
+
+               <div class="prefooter__popup d-n">
+                    <div class="container">
+                         <div class="prefooter__popup--wrapper">
+                              <div class="prefooter__popup--inner">
+                                   <div class="prefooter__popup--content">
+                                        <img src="assets/images/popupsearch/closeicon.svg" alt="close" class="prefooter__popup--close">
+                                        <h3 class="prefooter__popup--title">                                   
+                                             Заполните форму
+                                        </h3>
+                                        <form action="#" class="prefooter__popup--form">
+                                             <input type="text" name="text" class="prefooter__popup--input" placeholder="Имя" required>
+                                             <input type="text" name="text" class="prefooter__popup--input" placeholder="+7 (___) ___ - __ - __" required>
+                                             <input type="text" name="text" class="prefooter__popup--input" placeholder="Ссылка на страницу дома" required>
+                                             <button type="button" name="button" class="prefooter__popup--btn btn--sett">
+                                                  Оставить заявку
+                                             </button>
+                                        </form>
+                                   </div>
+                                   <div class="prefooter__popup--content d-n prefooter__popup--content--next prefooter__popup--titlenext">
+                                        <img src="assets/images/popupsearch/closeicon.svg" alt="close" class="prefooter__popup--close">
+                                        <div class="prefooter__next--text">
+                                             <h3 class="prefooter__popup--title">
+                                                  Ваша заявка отправлена!
+                                             </h3>
+                                             <p class="prefooter__popup--subtitle">
+                                                  Мы свяжемся с вами в течение 15 минут для уточнения деталей
+                                             </p>
+                                        </div>
+
+                                        <button type="button" name="button" class="prefooter__popup--btnnext btn--sett">
+                                             Закрыть
+                                        </button>
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
 
           </div>
 
@@ -1114,7 +1169,7 @@
                                    </nav>
                               </div>
                               <div class="footer__colomn footer__questionsblock">
-                                   <a href="#" class="footer__questionsblock--link">
+                                   <a href="#prefooter" class="footer__questionsblock--link">
                                         Сотрудничество
                                    </a>
                                    <a href="#scrollAnchorQuestionHeader" class="footer__questionsblock--link">
@@ -1169,7 +1224,7 @@
                          </div>
 
                          <div class="footermobile__questionsblock">
-                              <a href="#">
+                              <a href="#prefooter">
                                    <p class="footermobile__questionsblock--subtitle">
                                         Сотрудничество 
                                    </p>
