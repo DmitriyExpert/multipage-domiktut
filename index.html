@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
      <link rel="stylesheet" href="assets/owl/dist/assets/owl.carousel.min.css">
      <link rel="stylesheet" href="assets/owl/dist/assets/owl.theme.default.min.css">
 </head>
-<body>
+<body style="display: none;">
      <div class="wrapper">
 
           <div class="popup__search d-n">
@@ -154,9 +154,11 @@
                                                        </div>
                                                   </div>
                                              </div>
-                                             <button class="header__locationblock--catalogbtn catalogbtn--blackversion" name="button" type="button">
-                                                  Каталог
-                                             </button>
+                                             <a href="catalog.html">
+                                                  <button class="header__locationblock--catalogbtn catalogbtn--blackversion" name="button" type="button">
+                                                       Каталог
+                                                  </button>
+                                             </a>
                                         </div>
                                    </div>
                               </div>
@@ -177,7 +179,12 @@
                          </div>
                          <div class="header__inner">
                               <div class="header__lastblock">
-                                   <img src="assets/images/header/heartblack.svg" alt="heart" class="heart--icon">
+                                   <div class="header__lastblock--heartblock heartblock">
+                                        <img src="assets/images/header/heartblack.svg" alt="heart" class="heart--icon">
+                                        <div class="heartblock__bagblock d-n">
+
+                                        </div>
+                                   </div>
                                    <button class="header__lastblock--search" name="button" type="button">
                                         <img src="assets/images/header/search.svg" alt="search" class="header__search--icon">
                                         <p class="header__btntext">
@@ -745,9 +752,11 @@
                                         </div>
                                    </div>
                               </div>
-                              <button type="button" class="popular__btncatalog btn--sett" name="button">
-                                   Перейти в каталог
-                              </button>
+                              <a href="catalog.html" class="popular__btncatalog--link">
+                                   <button type="button" class="popular__btncatalog btn--sett" name="button">
+                                        Перейти в каталог
+                                   </button>
+                              </a>
                          </div>
                          <div class="popular__wrapper popular__inner--delnext">
                               <div class="popular__inner--delnext">
@@ -1083,7 +1092,7 @@
                     <div class="container">
                          <div class="prefooter__popup--wrapper">
                               <div class="prefooter__popup--inner">
-                                   <div class="prefooter__popup--content">
+                                   <div class="prefooter__popup--content prefooter__popup--content--prev">
                                         <img src="assets/images/popupsearch/closeicon.svg" alt="close" class="prefooter__popup--close">
                                         <h3 class="prefooter__popup--title">                                   
                                              Заполните форму
@@ -1092,13 +1101,22 @@
                                              <input type="text" name="text" class="prefooter__popup--input" placeholder="Имя" required>
                                              <input type="text" name="text" class="prefooter__popup--input" placeholder="+7 (___) ___ - __ - __" required>
                                              <input type="text" name="text" class="prefooter__popup--input" placeholder="Ссылка на страницу дома" required>
+                                             <img src="assets/images/popupprefooter/whatMark.svg" alt="whatMark" class="prefooter__popup--icon">
+                                             <div class="prefooter__questionbody d-n">
+                                                  <div class="prefooter__questionbody--wrapper">
+                                                       <img src="assets/images/popupprefooter/questionback.svg" alt="questionback" class="prefooter__questionbody--back">
+                                                       <p class="prefooter__questionbody--text">
+                                                            Ссылка на вашу недвижимость на любом ресурсе с любого сайта или соц. сети
+                                                       </p>
+                                                  </div>
+                                             </div>
                                              <button type="button" name="button" class="prefooter__popup--btn btn--sett">
                                                   Оставить заявку
                                              </button>
                                         </form>
                                    </div>
                                    <div class="prefooter__popup--content d-n prefooter__popup--content--next prefooter__popup--titlenext">
-                                        <img src="assets/images/popupsearch/closeicon.svg" alt="close" class="prefooter__popup--close">
+                                        <img src="assets/images/popupsearch/closeicon.svg" alt="close" class="prefooter__popup--close prefooter__popupNextClose">
                                         <div class="prefooter__next--text">
                                              <h3 class="prefooter__popup--title">
                                                   Ваша заявка отправлена!
@@ -1108,7 +1126,7 @@
                                              </p>
                                         </div>
 
-                                        <button type="button" name="button" class="prefooter__popup--btnnext btn--sett">
+                                        <button type="button" name="button" class="prefooter__popup--btnnext prefooter__popupNextClose btn--sett">
                                              Закрыть
                                         </button>
 
@@ -1203,12 +1221,20 @@
                               <img src="assets/images/footer/logo.svg" alt="logo" class="footer__logo">
                          </a>
                          <div class="footermobile__maincontent">
-                              <div class="footermobile__cityblock">
-                                   <img src="assets/images/footer/maplocator.svg" alt="maplocator" class="footermobile__locatoricon">
-                                   <p class="footermobile__citytitle">
+                              <div class="footermobile--city city__citytext">
+                                   <img src="assets/images/header/maplocator.svg" alt="map" class="city__maplocator">
+                                   <p class="city__title">
                                         Казань
                                    </p>
-                                   <img src="assets/images/footer/arrowdown.svg" alt="arrowdown" class="footermobile__arrowdownicon">
+                                   <img src="assets/images/header/arrowdown.svg" alt="arrowdown" class="city__arrowdown">
+                                   <div class="city__citytext--menu d-n">
+                                        <button class="city__citytext--menu-item citytext__menu--itemKazan" type="button" name="button">
+                                             Казань
+                                        </button>
+                                        <button class="city__citytext--menu-item citytext__menu--itemMoscow" type="button" name="button">
+                                             Москва
+                                        </button>
+                                   </div>
                               </div>
                               <div class="footermobile__btnblock">
                                    <button class="footermobile__btn" type="button" name="button">
@@ -1274,6 +1300,22 @@
                autoplay:true,
                autoplayTimeout:2500,
                autoplayHoverPause:true
+          });
+     </script>
+     <script type="text/javascript">
+          $(document).ready(function(){
+               var body = $("body");
+               body.fadeIn(600);
+               $(document).on(
+                    "click", "a:not([href^='#']):not([href^='tel']):not([href^='mailto']):not([href^='#prefooter']):not([href^='#scrollAnchorQuestionHeader'])"
+                    , function(e) {
+                    e.preventDefault();
+                    $("body").fadeOut(600);
+                    var self = this;
+                         setTimeout(function () {
+                         window.location.href = $(self).attr("href");
+                    }, 500);
+               });
           });
      </script>
 </body>

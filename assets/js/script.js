@@ -34,6 +34,29 @@ const intervalId = setInterval(() => {
 }, 1700);
 
 
+// Animation favorite block
+
+const favoriteBlocks = document.querySelectorAll('.popular__favoriteblock');
+const bagMark = document.querySelector('.heartblock__bagblock');
+let touchCounterFavorite = 0;
+for (let i = 0; i < favoriteBlocks.length; i++) {
+     favoriteBlocks[i].addEventListener('click', function () {
+          if (favoriteBlocks[i].classList.contains('popular__favoriteblock--active')) {
+               favoriteBlocks[i].classList.remove('popular__favoriteblock--active')
+               touchCounterFavorite -= 1
+               console.log(touchCounterFavorite)
+          } else {
+               favoriteBlocks[i].classList.add('popular__favoriteblock--active');
+               touchCounterFavorite+=1
+               console.log(touchCounterFavorite)
+          }
+          if (touchCounterFavorite > 0) {
+               bagMark.classList.remove('d-n')
+          } else if (touchCounterFavorite == 0) {
+               bagMark.classList.add('d-n')
+          }
+     })
+}
 
 
 // pop up City
@@ -325,8 +348,10 @@ btnSearchInner.addEventListener('click', function () {
 const prefooterBtn = document.querySelector('.prefooter__button');
 const prefooterCloseBtn = document.querySelector('.prefooter__popup--close');
 const prefooterPopup = document.querySelector('.prefooter__popup');
+const prefooterPopupPrev = document.querySelector('.prefooter__popup--content--prev');
 const prefooterPopupNextBtn = document.querySelector('.prefooter__popup--btn');
 const prefooterPopupNext = document.querySelector('.prefooter__popup--content--next');
+const prefooterNextCloseBtns = document.querySelectorAll('.prefooter__popupNextClose');
 
 prefooterBtn.addEventListener('click', function () {
      if (prefooterPopup.classList.contains('d-n')) {
@@ -347,6 +372,66 @@ prefooterCloseBtn.addEventListener('click', function () {
           bodySite.classList.remove('overflowHidden');
      }, 300);
 });
+
+
+prefooterPopupNextBtn.addEventListener('click', function () {
+     prefooterPopupNext.classList.remove('d-n');
+     prefooterPopupNext.classList.add('activatedNextPrefooterPopup');
+     prefooterPopupPrev.classList.add('d-n')
+     setTimeout(() => {
+          prefooterPopupNext.classList.remove('activatedNextPrefooterPopup');
+     }, 300);
+});
+
+for (let i = 0; i < prefooterNextCloseBtns.length; i++) {
+     prefooterNextCloseBtns[i].addEventListener('click', function () {
+          prefooterPopup.classList.add('animationPopupClose');
+          setTimeout(() => {
+               prefooterPopupNext.classList.add('d-n');
+               prefooterPopup.classList.remove('animationPopupClose');
+               prefooterPopup.classList.add('d-n');
+               bodySite.classList.remove('overflowHidden');
+               prefooterPopupPrev.classList.remove('d-n')
+          }, 300);
+     })
+}
+
+
+const prefooterQuestIcon = document.querySelector('.prefooter__popup--icon');
+const prefooterQuestBody = document.querySelector('.prefooter__questionbody');
+
+if (this.screen.availWidth >= 992) {
+     prefooterQuestIcon.addEventListener('mouseover', function () {
+          prefooterQuestBody.classList.remove('d-n');
+          prefooterQuestBody.classList.add('prefooter__questionbody--animopen');
+          setTimeout(() => {  
+               prefooterQuestBody.classList.remove('prefooter__questionbody--animopen');
+          }, 100);
+     })
+     prefooterQuestIcon.addEventListener('mouseout', function () {
+          prefooterQuestBody.classList.add('prefooter__questionbody--animclose');
+          setTimeout(() => {  
+               prefooterQuestBody.classList.add('d-n');
+               prefooterQuestBody.classList.remove('prefooter__questionbody--animclose');
+          }, 100);
+     })     
+}
+
+if (this.screen.availWidth < 992) {
+     prefooterQuestIcon.addEventListener('click', function () {
+          if (prefooterQuestBody.classList.contains('prefooter__questionbody--animopen')) {
+               prefooterQuestBody.classList.remove('prefooter__questionbody--animopen');
+               prefooterQuestBody.classList.add('prefooter__questionbody--animclose');
+               setTimeout(() => {  
+                    prefooterQuestBody.classList.add('d-n');
+                    prefooterQuestBody.classList.remove('prefooter__questionbody--animclose');
+               }, 100);
+          } else {
+               prefooterQuestBody.classList.remove('d-n');
+               prefooterQuestBody.classList.add('prefooter__questionbody--animopen');
+          }
+     })
+}
 
 
 
