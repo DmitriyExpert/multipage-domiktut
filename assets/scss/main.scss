@@ -377,9 +377,9 @@
 }
 
 .header__locationblock--catalogbtn {
-     width: 136px;
+     max-width: 100%;
      text-align: center;
-     padding: 8px 0 10px 0;
+     padding: 8px 20px 10px 20px;
      border-radius: 50px;
 
      color: #fff;
